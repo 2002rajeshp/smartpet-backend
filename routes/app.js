@@ -5,7 +5,7 @@ const router = express.Router();
 router.get("/version", (req, res) => {
   res.json({
     latestVersion: "1.0.1",
-    apkUrl: "https://smartpet-backend.onrender.com/apk/my_app_v1.0.1.apk",
+    apkUrl: "https://smartpet-backend.onrender.com/apk/app-debug.apk",
     forceUpdate: false,
     releaseNotes: "UI changes, bug fixes, performance improvements"
   });
