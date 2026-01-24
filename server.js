@@ -42,6 +42,7 @@ const petRoutes = require('./routes/pet');
 const safeZoneRoutes = require("./routes/safe");
 
 
+const appRoutes = require('./routes/app');
 
 
 const app = express();
@@ -52,6 +53,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/pet', petRoutes);
 app.use("/api/safe-zones", safeZoneRoutes);
+app.use('/api/app', appRoutes);
 
 
 app.get('/', (req, res) => res.json({ success: true, message: 'API running' }));
