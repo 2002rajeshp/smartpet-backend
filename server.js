@@ -54,6 +54,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/pet', petRoutes);
 app.use("/api/safe-zones", safeZoneRoutes);
 app.use('/api/app', appRoutes);
+app.use("/apk", express.static(path.join(__dirname, "apk")));
 
 
 app.get('/', (req, res) => res.json({ success: true, message: 'API running' }));
