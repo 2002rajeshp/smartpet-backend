@@ -44,6 +44,8 @@ const safeZoneRoutes = require("./routes/safe");
 
 
 const appRoutes = require('./routes/app');
+const firmwareRoutes = require("./routes/firmware");
+
 
 
 const app = express();
@@ -56,6 +58,9 @@ app.use('/api/pet', petRoutes);
 app.use("/api/safe-zones", safeZoneRoutes);
 app.use('/api/app', appRoutes);
 app.use("/apk", express.static(path.join(__dirname, "apk")));
+
+app.use("/api/firmware", firmwareRoutes);
+app.use("/firmware", express.static("firmware"));
 
 
 app.get('/', (req, res) => res.json({ success: true, message: 'API running' }));
